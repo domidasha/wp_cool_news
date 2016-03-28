@@ -2,7 +2,6 @@
 <h2>Footer Information:</h2>
 
 <aside>
-<h3>Socialize</h3>
 <ul>
 	<li>Email: <?php bloginfo('admin_email')?></li>
 	<li><a href="#" class="soc facebook">facebook</a></li>

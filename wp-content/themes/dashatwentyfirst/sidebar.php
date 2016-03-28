@@ -1,6 +1,8 @@
 <aside class="left-sidebar">
 	
 
+
+	
 	<?php if (!dynamic_sidebar('left-sidebar')):?>
 		<div class="widget">
 			<h2>World News </h2>
@@ -12,16 +14,6 @@
 		</div>
 	<?php endif;?>
 
-
-	<!-- <em>Left Side Bar:</em> 
-	
-	<ul>
-		<li><a href="">Vintage in the Sunny Cold</a></li>
-		<li><a href="">CONVERSATION WITH SYLVIE MUS</a></li>
-		<li><a href="">Thank you for all the lovely and generous Lookbook </a></li>
-		<li><a href="">Emerald, Jade, Lime and Mint, oh my!</a></li>
-		<li><a href="">The small man is slow to launch out into expense when things are going well. </a></li>
-	</ul> -->
 </aside><!-- .left-sidebar -->
 
 <aside class="right-sidebar">

@@ -19,7 +19,8 @@
 			</p>	
 			
 				<p><?php the_tags();?></p>
-
+				
+				<?php comments_template(); ?>
 
 			</article>
 
