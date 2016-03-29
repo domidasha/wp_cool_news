@@ -207,6 +207,20 @@ body {
 }
 
 
+/* Bottom Sidebar
+-----------------------------------------------------------------------------*/
+.sidebar-bottom {
+	display:block;
+} 
+
+li.sidebar-bottom{
+	float:left;
+}
+a.sidebar-bottom {
+	display: block;
+}
+
+
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {

@@ -7,6 +7,7 @@
 			<section>
 			<!-- Begin content -->
 			<p style="text-align:center;">INDEX </p>  
+
 				<?php if (have_posts()) :?>
 					<?php while (have_posts()) : the_post();?>
 		
@@ -41,25 +42,15 @@
 			</section>
 			</div><!-- .content -->
 		</div><!-- .container-->
+		<?php	get_sidebar('left'); ?>
 
-		<?php get_sidebar(); ?>
+		<?php if (is_front_page()) {
+			get_sidebar('bottom');
+			
+			
+			} ?>
 		
-<!-- 		???????? -->
-<?php the_widget(
-  Create_Employee_Widget,
-  $instance = array(
-        'title'                 => __('WPFirstAid Sample'),
-        'choices'               => 'The Doctor',
-        'show_choices'          => true,
-        'optionals'             => 'right'
-  ),
-  $args = array (
-  'before_widget'   => '',
-  'before_title'    => '',
-  'after_title'     => '',
-  'after_widget'    => ''
-  )
-);?>
+
 
 	</div><!-- .middle-->
 

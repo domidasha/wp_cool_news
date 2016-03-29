@@ -45,21 +45,42 @@ class Create_Employee_Widget extends WP_Widget {
 
     <?php  }
      public function widget( $args, $instance ) {
-
+     	wp_reset_postdata();
            $query = new WP_Query( array( 'post_type'=>'employee' ) );
 		echo '<ul>';
 		while ( $query->have_posts() ) {
-			echo "<li><h2>".get_the_title(). "</h2><br>".
-			$query->the_post();			
-			the_excerpt()."</li>";
+			$query->the_post();
+			
+			
+			$position = get_metadata( 'employee', $post->ID, 'country', true);
+			$thumbnail = get_the_post_thumbnail($page->ID, 'homepage-thumb');
+			$title = get_the_title();		
+			$link = get_the_permalink();
+			
+			$html = '<li class="sidebar-bottom">';
+			$html .= '<a href="'.$link.'">'.$title.'</a><br>';
+			$html .= $position;
+   		    $html .= $thumbnail;
+ 			$html .='</li>';			
+
+ 			echo $html;
+ 			//the_post_thumbnail( array (100,100), 'class=imgStyle');
+			
+			
 			
 		}
 		echo '</ul>';
+		// Restore original Post Data
+		
 	}
 }
 
-add_action( 'widgets_init', function(){
-     register_widget( 'Create_Employee_Widget' );
-});
+// register  widget
+function register_sidebar_employee_widget() {
+	register_widget( 'Create_Employee_Widget' );
+}
+add_action( 'widgets_init', 'register_sidebar_employee_widget' );
+
+
 
 ?>

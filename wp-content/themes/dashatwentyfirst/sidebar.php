@@ -1,8 +1,5 @@
 <aside class="left-sidebar">
 	
-
-
-	
 	<?php if (!dynamic_sidebar('left-sidebar')):?>
 		<div class="widget">
 			<h2>World News </h2>

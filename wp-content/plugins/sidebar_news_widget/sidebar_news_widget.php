@@ -46,12 +46,12 @@ class Sidebar_News_Widget extends WP_Widget {
 	 * @param array $instance Saved values from database.
 	 */
 	public function widget( $args, $instance ) {			
-		
+		wp_reset_postdata();
 		$query = new WP_Query( array( 'author_name' => 'wordpressuser', 'post_type'=>'news' ) );
 		echo '<ul>';
 		while ( $query->have_posts() ) {
-			echo "<li><h2>".get_the_title(). "</h2><br>".
-			$query->the_post();			
+			$query->the_post();
+			echo "<li><h2>".get_the_title(). "</h2>".
 			the_excerpt()."</li>";
 			
 		}

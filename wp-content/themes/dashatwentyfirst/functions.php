@@ -29,12 +29,19 @@ register_nav_menu('menu', 'Header Menu');
 // }
 // add_action( 'init', 'register_nav_menus' );
 
-/*sidebar*/
+/*sidebar Left*/
 register_sidebar(array(
-	'name'=>'Sidebar widgets',
+	'name'=>'Sidebar widget',
 	'id'=>'left-sidebar',
 	'description'=>'Put here your widgets'
 	));
+
+/*sidebar Home*/
+register_sidebar(array(
+		'name'=>'Home Index Sidebar widget',
+		'id'=>'sidebar-bottom',
+		'description'=>'Put here your widgets'
+));
 
 /* Register new post type */
 add_action('init', 'register_post_types');
@@ -81,7 +88,8 @@ function register_post_types() {
 add_filter( 'widget_text', 'shortcode_unautop' );
 add_filter( 'widget_text', 'do_shortcode' );
 
-
+//img size
+add_image_size( 'homepage-thumb', 180, 180 );
 
 
 

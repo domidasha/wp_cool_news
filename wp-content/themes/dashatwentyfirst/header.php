@@ -27,9 +27,8 @@
 		<li><a href=""></a></li>
 	</ul>
 		<hgroup class="screen-reader-text">		
-			<h2 id="site-description"><?php bloginfo( 'description' ); ?>
-			</h2>
 			<p><a href='<?php echo home_url();?>'>home</a></p>
+			
 			
 		</hgroup>
 
