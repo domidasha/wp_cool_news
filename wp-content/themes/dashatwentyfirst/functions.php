@@ -1,6 +1,6 @@
 <?php
 
-/*загружаемые стии и скрипты*/
+/*загружаемые стили и скрипты*/
 function load_style_script() {
 	wp_enqueue_style('style', get_template_directory_uri().'/style.css');
 }
@@ -40,6 +40,14 @@ register_sidebar(array(
 register_sidebar(array(
 		'name'=>'Home Index Sidebar widget',
 		'id'=>'sidebar-bottom',
+		'description'=>'Put here your widgets'
+));
+
+
+/*sidebar Home*/
+register_sidebar(array(
+		'name'=>'Calculation Sidebar',
+		'id'=>'sidebar-calculation',
 		'description'=>'Put here your widgets'
 ));
 
