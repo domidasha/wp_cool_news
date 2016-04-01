@@ -37,9 +37,14 @@ get_header();?>
 	
 	<?php get_sidebar('calculation'); ?>
 	
+	<a href='#' class="myLinkClass">click on this link</a>
+	<div class="myDivClass">click on this link</div>
+	
 			</section>
 			</div><!-- .content -->
 		</div><!-- .container-->
+		
+		
 
 		<?php get_sidebar(); ?>
 	

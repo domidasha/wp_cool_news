@@ -20,16 +20,10 @@
  GNU General Public License for more details.
  */
 
+include('my-scripts.php');
 
 
- function my_scripts_method() {
- 	$plugin = 'calculation_widget/myCountScript.js';
-    wp_register_script( 'javascript', plugins_url($plugin));
-    wp_enqueue_script( 'javascript', plugins_url($plugin));
- }    
  
- add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
-
 
 
 
