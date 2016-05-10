@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+/*
+Theme Name: domiBlog
+Theme URI: http://wordpress.dev/
+Author: Darya Stukal
+Autor URI: -
+DEscription: A simple blog about life
+Version: 1.0
+License: GNU General Public License v2 pr later
+*/
+
+@import url("css/style.css");
+@import url("css/superfish.css");
