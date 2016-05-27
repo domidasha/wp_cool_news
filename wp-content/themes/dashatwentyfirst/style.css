@@ -136,6 +136,7 @@ body {
 }
 .content {
 	padding: 0 270px 0 270px;
+	overflow:hidden;
 }
 
 .post {
@@ -193,16 +194,24 @@ a.sidebar-bottom {
 	display: block;
 }
 
+/*posts*/
+.post-pictures {
+	float:left;
+	padding: 15px;
+	overflow:auto;
+}
+
 
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {
 	width: 1000px;
-	margin: -100px auto 0;
 	height: 80px;
 	background: #838B83;
 	position: relative;
 	padding: 10px;
+	margin: 0 auto;
+	overflow: auto;
 }
 
 .footer a {
@@ -212,6 +221,7 @@ a.sidebar-bottom {
 .footer li {
 	float: left;
 	margin-right: 10px;
+	
 }
 
 .page-title {

@@ -1,7 +1,9 @@
+
 <footer class="footer">
+
+
 <h2>Footer Information:</h2>
 
-<aside>
 <ul>
 	<li>Email: <?php bloginfo('admin_email')?></li>
 	<li><a href="#" class="soc facebook">facebook</a></li>
