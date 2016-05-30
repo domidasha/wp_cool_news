@@ -1,39 +1,25 @@
-<?php get_header();?>
+<?php
+/*
+Template Name: Archives
+*/
+get_header(); ?>
 
-	<div class="middle">
-	ARCHIVE
-		<div class="container">
-			<div class="content">
-			<section>
-			<!-- Begin content -->
-		<p style="text-align:center;">ARCHIVE</p>
-		<?php if (have_posts()) :?>
-			<?php while (have_posts()) : the_post();?>
+<div id="container">
+	<div id="content" role="main">
 
-			<article class="post">
-
-			<h2><a href='<?php the_permalink() ?>'><?php the_title();?></a></h2>
-			<span>(<?php the_time('j.m.Y')?>)</span>	
-			<p>	<?php the_excerpt()?> </p>	
-			
-			</article>
-
+		<?php
+		$id=16; // ID заданной рубрики
+		$n=3;   // количество выводимых записей
+		$recent = new WP_Query("cat=$id&showposts=$n"); 
+		while($recent->have_posts()) : $recent->the_post();
+		?>
+		<a href="<?php the_permalink() ?>" rel="bookmark">
+		<?php the_title(); ?>
+		</a><br><?php the_excerpt(); ?> 
 		<?php endwhile; ?>
-		<?php else : ?>
 
-		<h2 class="center">Not Found</h2>
-		<p class="center">Sorry, but you are looking for something that isn't here.</p>
-		<?php get_search_form(); ?>
-	<?php endif; ?>
-		 
-			</section>
-			</div><!-- .content -->
-		</div><!-- .container-->
+	</div><!-- #content -->
+</div><!-- #container -->
 
-		<?php get_sidebar(); ?>
 
-	</div><!-- .middle-->
-
-</div><!-- .wrapper -->
-
-<?php get_footer();?>
+<?php get_footer(); ?>

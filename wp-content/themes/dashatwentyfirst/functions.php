@@ -99,7 +99,7 @@ function pictures_init() {
 			'rewrite' => array("slug" => "medewerkers"), // формат ссылок
 			'supports' => array('title', 'editor', 'thumbnail'),
 			'taxonomies' => array( 'post_tag','pictures_categories'),
-			'rewrite' => array('slug' => 'pictures/%themes_categories%','with_front' => FALSE),
+			//'rewrite' => array('slug' => 'pictures/%themes_categories%','with_front' => FALSE),
 			);
 	
 	// регистрируем новый тип
@@ -124,34 +124,34 @@ function pictures_taxonomy() {
 }
 add_action( 'init', 'pictures_taxonomy');
 
-function default_taxonomy_term( $post_id, $post ) {
-	if ( 'publish' === $post->post_status ) {
-		$defaults = array(
-				'pictures_categories' => array( 'other'),   //
+// function default_taxonomy_term( $post_id, $post ) {
+// 	if ( 'publish' === $post->post_status ) {
+// 		$defaults = array(
+// 				'pictures_categories' => array( 'other'),   //
 
-		);
-		$taxonomies = get_object_taxonomies( $post->post_type );
-		foreach ( (array) $taxonomies as $taxonomy ) {
-			$terms = wp_get_post_terms( $post_id, $taxonomy );
-			if ( empty( $terms ) && array_key_exists( $taxonomy, $defaults ) ) {
-				wp_set_object_terms( $post_id, $defaults[$taxonomy], $taxonomy );
-			}
-		}
-	}
-}
-add_action( 'save_post', 'default_taxonomy_term', 100, 2 );
+// 		);
+// 		$taxonomies = get_object_taxonomies( $post->post_type );
+// 		foreach ( (array) $taxonomies as $taxonomy ) {
+// 			$terms = wp_get_post_terms( $post_id, $taxonomy );
+// 			if ( empty( $terms ) && array_key_exists( $taxonomy, $defaults ) ) {
+// 				wp_set_object_terms( $post_id, $defaults[$taxonomy], $taxonomy );
+// 			}
+// 		}d
+// 	}
+// }
+// add_action( 'save_post', 'default_taxonomy_term', 100, 2 );
 
 //Then to change the permalink
-function filter_post_type_link($link, $post)
-{
-	if ($post->post_type != 'pictures')
-		return $link;
+// function filter_post_type_link($link, $post)
+// {
+// 	if ($post->post_type != 'pictures')
+// 		return $link;
 
-		if ($cats = get_the_terms($post->ID, 'pictures_categories'))
-			$link = str_replace('%pictures_categories%', array_pop($cats)->slug, $link);
-			return $link;
-}
-add_filter('post_type_link', 'filter_post_type_link', 10, 2);
+// 		if ($cats = get_the_terms($post->ID, 'pictures_categories'))
+// 			$link = str_replace('%pictures_categories%', array_pop($cats)->slug, $link);
+// 			return $link;
+// }
+// add_filter('post_type_link', 'filter_post_type_link', 10, 2);
 
 //чтобы работал shortcode
 add_filter( 'widget_text', 'shortcode_unautop' );

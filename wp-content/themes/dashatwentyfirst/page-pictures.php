@@ -10,7 +10,25 @@ get_header();?>
         <div id="container">
             <div id="content">
 		<h1>Pictures Page</h1>
-<?php
+<?php            
+
+		//show ctegories
+		$picargs=array(
+            		'hide_empty'        => 0,
+            		'parent'        => 0,
+            		'taxonomy'      => 'pictures_categories');
+            
+            $piccats=get_categories($picargs);
+            
+            foreach($piccats as $lc){
+            	$termlink = get_term_link( $lc->slug, 'pictures_categories' );            
+            	?>           		
+            		<a class="single-library-cat" href="<?php echo $termlink; ?>">
+            		    <p><?php the_field('category', 'pictures_categories'.$lc->term_id); ?></p>
+            		         <?php echo $lc->name; ?>
+            		 </a>        		
+                    <?php }      
+                    
 		wp_reset_postdata();  
 
             $args = array(
@@ -19,7 +37,8 @@ get_header();?>
                    'paged' => get_query_var('paged'),
                );
             
-            query_posts($args);
+            query_posts($args);           
+                    
 
             		if (have_posts()) :?>
 					<?php while (have_posts()) : the_post();?>
@@ -44,20 +63,22 @@ get_header();?>
 						$height = $image['sizes'][ $size . '-height' ];
 						
 						?>
-					
+				
 						<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb; ?>" /></a>					
 						<?php endif; ?>
 					
-					<p><?php the_field( "name" );?>,<?php the_field( "year" );?></p> 					
+					<p><?php the_field( "name" );?>,<?php the_field( "year" );?></p> 		
+											
+						<?php $term = get_field('category'); 
+						foreach ($term as $t): ?> 
+						<p><?php echo $t->name; ?></p>
+						<?php endforeach; ?>
+						
 					
-					<p><?php the_tags();?></p>
-	
-				
-					<p class="right"><a href="<?php the_permalink(); ?>">
-					<?php comments_number("no comments", "1 comment", '% comments'); ?></a></p>
-				
-					</article>
-		
+					<p> <?php the_tags(); ?></p> 
+					
+					</article>		
+							
 				<?php endwhile; ?>
 				
 				<?php else : ?>

@@ -48,19 +48,12 @@
 				<p><?php the_field('price'); ?>$</p>
 				<p><?php the_field( "year" );?></p>					
 									
-				<?php 			
-					$term = get_field('taxonomy_field_name');
-					if( $term ): ?>
-					<h2><?php echo $term->name; ?></h2>
-					<p><?php echo $term->description; ?></p>					
-				<?php endif; ?>
+			
 				
-				
-	
-				<h2><?php the_title();?></h2>	
-				<p><?php the_post_thumbnail(array(150,150), 'class=imgStyle ');?>
-					<?php the_content()?> 
-				</p>	
+				<div class="description">
+					<?php the_field('description'); ?>
+				</div>
+			
 			</article>
 
 		<?php endwhile; ?>

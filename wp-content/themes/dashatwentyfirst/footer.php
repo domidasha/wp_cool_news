@@ -12,12 +12,12 @@
 </ul>
 <br>
 
-	<p><?php wp_nav_menu( array( 
+	<?php wp_nav_menu( array( 
 		'theme_location' => 'menu', 
 		'container_class' => 'myMenu',
 		'content' =>false 
 		) ); ?>
-		</p>
+		
 <div class="push"></div>
 </footer>
 </div><!--//#across-->

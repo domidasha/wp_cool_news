@@ -201,6 +201,10 @@ a.sidebar-bottom {
 	overflow:auto;
 }
 
+.description {
+	font-style:italic;
+	margin: 15px 0 15px 15px;
+}
 
 /* Footer
 -----------------------------------------------------------------------------*/

@@ -1,8 +1,11 @@
-<?php 
+<?php
+// vars
+$queried_object = get_queried_object();
+$taxonomy = $queried_object->taxonomy;
+$term_id = $queried_object->term_id;
 
-/*
- Template Name: Category
-*/
+$GLOBALS['wp_embed']->post_ID = $taxonomy . '_' . $term_id;
+
 get_header();?>
 
 	<div class="middle">
