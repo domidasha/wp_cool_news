@@ -11,25 +11,7 @@ get_header();?>
             <div id="content">
 		<h1>Pictures Page</h1>
 <?php            
-
-		//show ctegories
-		$picargs=array(
-            		'hide_empty'        => 0,
-            		'parent'        => 0,
-            		'taxonomy'      => 'pictures_categories');
-            
-            $piccats=get_categories($picargs);
-            
-            foreach($piccats as $lc){
-            	$termlink = get_term_link( $lc->slug, 'pictures_categories' );            
-            	?>           		
-            		<a class="single-library-cat" href="<?php echo $termlink; ?>">
-            		    <p><?php the_field('category', 'pictures_categories'.$lc->term_id); ?></p>
-            		         <?php echo $lc->name; ?>
-            		 </a>        		
-                    <?php }      
-                    
-		wp_reset_postdata();  
+  	wp_reset_postdata();  
 
             $args = array(
                    'post_type' => 'pictures',
@@ -40,7 +22,7 @@ get_header();?>
             query_posts($args);           
                     
 
-            		if (have_posts()) :?>
+            		if (have_posts()) : ?>  
 					<?php while (have_posts()) : the_post();?>
 					
 					<article class="post-pictures">			
@@ -67,16 +49,19 @@ get_header();?>
 						<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb; ?>" /></a>					
 						<?php endif; ?>
 					
-					<p><?php the_field( "name" );?>,<?php the_field( "year" );?></p> 		
-											
-						<?php $term = get_field('category'); 
-						foreach ($term as $t): ?> 
-						<p><?php echo $t->name; ?></p>
-						<?php endforeach; ?>
-						
-					
+						<p><?php the_field( "name" );?>,<?php the_field( "year" );?></p> 		
+
+					<?php $terms = get_field('category');
+							echo "Categories:";
+								if( $terms ): ?>		
+									<?php foreach( $terms as $term ): ?>
+										<a href="<?php echo get_term_link( $term ); ?>">
+										<?php echo $term->name; ?>
+										</a>							
+									<?php endforeach; ?>				
+								<?php endif; ?>								
 					<p> <?php the_tags(); ?></p> 
-					
+									
 					</article>		
 							
 				<?php endwhile; ?>

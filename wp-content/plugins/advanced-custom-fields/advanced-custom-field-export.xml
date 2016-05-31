@@ -17,7 +17,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.4.2" created="2016-05-27 14:35" -->
+<!-- generator="WordPress/4.4.2" created="2016-05-31 14:31" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.1/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -30,7 +30,7 @@
 	<title>wordpress-blog</title>
 	<link>http://wordpress.dev</link>
 	<description>Just another WordPress site</description>
-	<pubDate>Fri, 27 May 2016 14:35:45 +0000</pubDate>
+	<pubDate>Tue, 31 May 2016 14:31:53 +0000</pubDate>
 	<language></language>
 	<wp:wxr_version>1.1</wp:wxr_version>
 	<wp:base_site_url>http://wordpress.dev</wp:base_site_url>
@@ -75,7 +75,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>hide_on_screen</wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:4:"tags";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5746ff624cf68</wp:meta_key>
@@ -95,7 +95,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5748018ac345f</wp:meta_key>
-			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_5748018ac345f";s:5:"label";s:9:"technique";s:4:"name";s:9:"technique";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"choices";a:32:{s:16:"acrylic painting";s:16:"acrylic painting";s:15:"action painting";s:15:"action painting";s:18:"aerial perspective";s:18:"aerial perspective";s:12:"anamorphosis";s:12:"anamorphosis";s:7:"camaieu";s:7:"camaieu";s:15:"casein painting";s:15:"casein painting";s:11:"chiaroscuro";s:11:"chiaroscuro";s:11:"divisionism";s:11:"divisionism";s:14:"easel painting";s:14:"easel painting";s:18:"encaustic painting";s:18:"encaustic painting";s:14:"foreshortening";s:14:"foreshortening";s:15:"fresco painting";s:15:"fresco painting";s:7:"gouache";s:7:"gouache";s:8:"graffiti";s:8:"graffiti";s:9:"grisaille";s:9:"grisaille";s:7:"impasto";s:7:"impasto";s:18:"miniature painting";s:18:"miniature painting";s:5:"mural";s:5:"mural";s:12:"oil painting";s:12:"oil painting";s:14:"panel painting";s:14:"panel painting";s:8:"panorama";s:8:"panorama";s:11:"perspective";s:11:"perspective";s:18:"plein-air painting";s:18:"plein-air painting";s:13:"sand painting";s:13:"sand painting";s:15:"scroll painting";s:15:"scroll painting";s:7:"sfumato";s:7:"sfumato";s:9:"sgraffito";s:9:"sgraffito";s:11:"sotto in su";s:11:"sotto in su";s:7:"tachism";s:7:"tachism";s:16:"tempera painting";s:16:"tempera painting";s:9:"tenebrism";s:9:"tenebrism";s:14:"tromp l’oeil";s:14:"tromp l’oeil";}s:13:"default_value";s:0:"";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_574802dbc3460";s:8:"operator";s:2:"==";s:5:"value";s:9:"landscape";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_5748018ac345f";s:5:"label";s:4:"type";s:4:"name";s:4:"type";s:4:"type";s:6:"select";s:12:"instructions";s:69:"There are three main types of paints: Watercolor, Acrylics, and Oils.";s:8:"required";s:1:"0";s:7:"choices";a:5:{s:11:"watercolors";s:11:"watercolors";s:8:"acrylics";s:8:"acrylics";s:4:"oils";s:4:"oils";s:6:"crayon";s:6:"crayon";s:6:"pastel";s:6:"pastel";}s:13:"default_value";s:0:"";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_574802dbc3460";s:8:"operator";s:2:"==";s:5:"value";s:9:"landscape";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_574802dbc3460</wp:meta_key>
@@ -119,7 +119,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_574858d1c60a3</wp:meta_key>
-			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_574858d1c60a3";s:5:"label";s:8:"category";s:4:"name";s:8:"category";s:4:"type";s:8:"taxonomy";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:8:"taxonomy";s:19:"pictures_categories";s:10:"field_type";s:8:"checkbox";s:10:"allow_null";s:1:"0";s:15:"load_save_terms";s:1:"0";s:13:"return_format";s:2:"id";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_57480464c3464";s:8:"operator";s:2:"==";s:5:"value";s:9:"Modernism";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:12;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_574858d1c60a3";s:5:"label";s:8:"category";s:4:"name";s:8:"category";s:4:"type";s:8:"taxonomy";s:12:"instructions";s:18:"Field Instructions";s:8:"required";s:1:"0";s:8:"taxonomy";s:19:"pictures_categories";s:10:"field_type";s:8:"checkbox";s:10:"allow_null";s:1:"0";s:15:"load_save_terms";s:1:"1";s:13:"return_format";s:6:"object";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_57480464c3464";s:8:"operator";s:2:"==";s:5:"value";s:9:"Modernism";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:12;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>rule</wp:meta_key>

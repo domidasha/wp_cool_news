@@ -201,7 +201,32 @@ a.sidebar-bottom {
 	overflow:auto;
 }
 
+.single-picture {
+	padding : 15px;
+}
+
+
+.picture {
+	float:left;
+	padding-right: 20px;
+}
+
+.picture-info {
+	float:left;
+	width: 45%;
+	
+}
+
+.info {
+	float: left;
+	width: 90%;
+	font-weight: bold;
+}
+
+
+
 .description {
+	float:left;
 	font-style:italic;
 	margin: 15px 0 15px 15px;
 }
