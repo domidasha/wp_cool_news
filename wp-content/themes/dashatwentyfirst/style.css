@@ -65,12 +65,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 }
 
 a{
-	color: #706E6E;
+	color: #000000;
 }
 
 a:hover {
 	text-decoration: none;
-	color: #504F4F;
 }
 
 body {
@@ -94,7 +93,7 @@ body {
 .header {
 	height: 80px;
 	padding: 10px;
-	background: #8B8878;
+	background: #008000;
 }
 
 .myMenu {
@@ -163,8 +162,13 @@ body {
 	margin-left: -100%;
 	position: relative;
 	padding: 10px 0;
-	background: #CDCDC1;
+	background: #8FBC8F	;
 
+}
+
+
+.widget {
+	padding: 10px;
 }
 
 
@@ -177,7 +181,7 @@ body {
 	margin-left: -250px;
 	position: relative;
 	padding: 10px 0;
-	background: #EEE8CD;
+	background:#8FBC8F	;
 }
 
 
@@ -236,7 +240,7 @@ a.sidebar-bottom {
 .footer {
 	width: 1000px;
 	height: 80px;
-	background: #838B83;
+	background: #008000;
 	position: relative;
 	padding: 10px;
 	margin: 0 auto;

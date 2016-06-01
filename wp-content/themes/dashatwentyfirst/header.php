@@ -18,18 +18,14 @@
 
 <div class="wrapper">
 
-	<header class="header">
+	<header class="header">	
+	<p><a href='<?php echo home_url();?>'>HOME</a></p>
+	<br>
 	<?php wp_nav_menu( array( 
 		'theme_location' => 'menu',
 		'menu_class'      => 'myMenu'
 	)); ?>
-	<ul class="myMenu">
-		<li><a href=""></a></li>
-	</ul>
-		<hgroup class="screen-reader-text">		
-			<p><a href='<?php echo home_url();?>'>home</a></p>
-			
-			
-		</hgroup>
+
+
 
 	</header><!-- .header-->

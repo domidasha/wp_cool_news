@@ -2,24 +2,78 @@
 	
 	<?php if (!dynamic_sidebar('left-sidebar')):?>
 		<div class="widget">
-			<h2>World News </h2>
+			<h3>Main Categories </h3>
 			<?php if ( dynamic_sidebar('example_widget_area_name') ) : else : endif; ?>
+			
 			<ul>
 			<?php wp_list_categories(array(
 			'title_li'=>''));?>
 			</ul>
+			
+		
+			<h3>Picture categories: </h3>
+			
+			<?php $args = array( 'taxonomy' => 'pictures_categories');
+			$categories = get_categories($args);
+			if($categories){
+				echo '<ul>';
+				foreach($categories as $category) {
+					echo '<li>';					
+			?>
+			
+				<a href="<?php echo get_term_link( $category ); ?>">
+				<?php echo $category->name; ?>
+				</a>			
+			<?php
+					echo '</li>';
+				} 
+				echo '</ul>';
+			}  	
+			?>			
 		</div>
+		
 	<?php endif;?>
 
 </aside><!-- .left-sidebar -->
 
 <aside class="right-sidebar">
-	<em>Right Side Bar:</em> 
-	<ul>
-		<li><a href="">What matters in life is not what happens to you but what you remember and how you remember it</a></li>
-		<li><a href="">It is not true that people stop pursuing dreams because they grow old, they grow old because they stop pursuing dreams.</a></li>
-		<li><a href="">THANK YOU for all the lovely and generous Lookbook </a></li>
-		<li><a href="">Emerald, Jade, Lime and Mint, oh my!</a></li>
-		<li><a href="">The small man is slow to launch out into expense when things are going well. </a></li>
-	</ul>
+	<div class="widget">
+		<h3>quotations:</h3> 
+		
+		<?php
+			wp_reset_postdata();  
+	
+	            $args = array(
+	                   'post_type' => 'news',
+	                   'publish' => true,
+	               );
+	            
+	            query_posts($args);                        
+	
+	            		if (have_posts()) : ?>  
+						<?php while (have_posts()) : the_post();?>
+						
+						<article class="post-pictures">			
+								
+						
+					
+						<a href="<?php the_permalink(); ?>">
+							<p><?php the_title();?></p>
+						</a> 
+						<?php the_excerpt()?> 
+										
+						</article>		
+								
+					<?php endwhile; ?>
+					
+					<?php else : ?>
+			
+				<h2 class="center">Not Found</h2>
+				<p class="center">Sorry, but you are looking for something that isn't here.</p>
+				<?php get_search_form(); ?>
+				
+				<?php endif; 
+	
+			wp_reset_query(); ?>
+	</div>
 </aside><!-- .right-sidebar -->

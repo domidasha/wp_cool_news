@@ -33,7 +33,7 @@
 						$width = $image['sizes'][ $size . '-width' ];
 						$height = $image['sizes'][ $size . '-height' ];?>
 					
-						
+
 					
 						<a href="<?php echo $url; ?>" title="<?php echo $title; ?>">
 							<img src="<?php echo $thumb; ?>" />
